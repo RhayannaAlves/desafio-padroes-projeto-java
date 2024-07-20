@@ -1,0 +1,17 @@
+package desafio.dio;
+
+public class SingletonLazyHolder {
+
+    private static class InstanceHolder {
+        public static final SingletonLazyHolder instancia = new SingletonLazyHolder();
+    }
+
+    private SingletonLazyHolder() {
+        super();  // Este super() é implícito e não é necessário explicitamente
+    }
+
+    public static SingletonLazyHolder getInstancia() {
+        return InstanceHolder.instancia;
+    }
+}
+
